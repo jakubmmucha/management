@@ -1,0 +1,68 @@
+<!-- Nav Start-->
+<header class="ecommerce">
+  <div class="container">
+      <div class="row">
+          <div class="col">
+              <nav>
+                  <a class="logo-erapper" href="javascript:void()"><img alt="" class="img-fluid"
+                                                        src="assets/images//logo/gym.png" style="height: 100px;"></a>
+                 <app-menu></app-menu>
+                  <div class="top-header-right">
+                      <ul>
+                          <li class="search">
+                              <a aria-expanded="false" data-toggle="dropdown" href="javascript:void()" id="dropdownMenuButton">
+                                  <i class="icon-search"></i>
+                              </a>
+                              <div aria-labelledby="dropdownMenuButton" class="dropdown-menu dropdown-menu-right">
+                                  <form class="form-inline search-form">
+                                      <div class="form-group">
+                                          <label class="sr-only">Email</label>
+                                          <input class="form-control-plaintext" placeholder="Search...."
+                                                 type="search">
+                                          <span class="d-sm-none mobile-search">
+                              </span>
+                                      </div>
+                                  </form>
+                              </div>
+                          </li>
+                          <li class="cart">
+                              <a>
+                                  <i class="icon-shopping-cart-full" ></i>
+                              </a>
+
+                              <div class="dropdown-menu dropdown-menu-right" >
+                                <ul class="shopping-cart" >
+
+                                    <li>
+                                      <div class="total">
+
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="buttons">
+                                        <a [routerLink]="'/e-commerce/cart'" class="view-cart">view cart</a>
+                                        <a [routerLink]="'/e-commerce/checkout'" class="checkout">checkout</a>
+                                      </div>
+                                    </li>
+                                  </ul>
+                              </div>
+                          </li>
+                          <li class="account ">
+                              <a aria-expanded="false" data-toggle="dropdown" href="javascript:void()" id="dropdownMenuButton2">
+                                  <i class="icon-user"></i>
+                              </a>
+                              <div aria-labelledby="dropdownMenuButton2" class="dropdown-menu show dropdown-menu-right">
+                                  <a class="dropdown-item" href="javascript:void()">Login</a>
+                                  <a class="dropdown-item" href="javascript:void()">Account</a>
+                                  <a class="dropdown-item" href="javascript:void()">Whishlist</a>
+                                  <a class="dropdown-item" href="javascript:void()">Checkout</a>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </nav>
+          </div>
+      </div>
+  </div>
+</header>
+<!-- Nav end-->
