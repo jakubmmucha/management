@@ -29,9 +29,9 @@ const routes = [
         MatFormFieldModule,
         MatIconModule,
         MatInputModule,
-
         AdminSharedModule
-    ]
+    ],
+  exports: [RouterModule]
 })
 export class RegisterModule {
 }

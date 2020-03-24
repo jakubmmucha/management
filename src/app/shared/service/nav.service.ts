@@ -191,7 +191,7 @@ export class NavService {
          { path: '/features/header-light', title: 'Light Header',  type: 'link' },
          { path: '/features/header-dark', title: 'Dark Header',  type: 'link' },
           { path: '/features/header-transparent', title: 'Glass Header',  type: 'link' },
-          { path: '/features/header-right-navigation', title: 'Header Right Navigation',  type: 'link' },
+          { path: '/features/header-right-navigation-admin', title: 'Header Right Navigation',  type: 'link' },
           { path: '/features/header-center-logo', title: 'Header Center Logo',  type: 'link' }]
        },
        { title: 'Breadcrumb Style',  type: 'link', children: [
@@ -224,8 +224,7 @@ export class NavService {
       ]
     },
    ]
-
-  	// Array
-	items = new BehaviorSubject<Menu[]>(this.MENUITEMS);
+  // Array
+	    items = new BehaviorSubject<Menu[]>(this.MENUITEMS);
 
 }

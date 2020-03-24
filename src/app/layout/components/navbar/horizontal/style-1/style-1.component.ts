@@ -43,7 +43,7 @@ export class NavbarHorizontalStyle1Component implements OnInit, OnDestroy {
      * On init
      */
     ngOnInit(): void {
-        // Get current navigation
+        // Get current navigation-admin
         this._fuseNavigationService.onNavigationChanged
             .pipe(
                 filter(value => value !== null),

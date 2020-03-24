@@ -25,10 +25,10 @@ export class AppComponent implements OnInit, OnDestroy {
     private _fuseConfigService: AdminConfigService,
     private _platform: Platform
   ) {
-    // Get default navigation
+    // Get default navigation-admin
 
-    // Register the navigation to the service
-    // Set the main navigation as our current navigation
+    // Register the navigation-admin to the service
+    // Set the main navigation-admin as our current navigation-admin
 
     // Set the navigationtranslations
 

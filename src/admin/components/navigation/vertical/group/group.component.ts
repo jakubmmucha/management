@@ -44,7 +44,7 @@ export class AdminNavVerticalGroupComponent implements OnInit, OnDestroy {
      * On init
      */
     ngOnInit(): void {
-        // Subscribe to navigation item
+        // Subscribe to navigation-admin item
         merge(
             this._fuseNavigationService.onNavigationItemAdded,
             this._fuseNavigationService.onNavigationItemUpdated,

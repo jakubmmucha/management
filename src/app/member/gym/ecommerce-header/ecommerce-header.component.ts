@@ -14,7 +14,7 @@ export class EcommerceHeaderComponent implements OnInit {
   constructor(public colorPicker: ColorScssService
   ) { }
   ngOnInit() {
-    this.colorPicker.setColorScheme('color-1');
+
   }
 
 }

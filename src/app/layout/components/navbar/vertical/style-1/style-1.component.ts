@@ -104,7 +104,7 @@ export class NavbarVerticalStyle1Component implements OnInit, OnDestroy {
                 this.fuseConfig = config;
             });
 
-        // Get current navigation
+        // Get current navigation-admin
         this._fuseNavigationService.onNavigationChanged
             .pipe(
                 filter(value => value !== null),

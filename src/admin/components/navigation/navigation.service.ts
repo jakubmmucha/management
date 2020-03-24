@@ -103,7 +103,7 @@ export class AdminNavigationService {
     // -----------------------------------------------------------------------------------------------------
 
     /**
-     * Register the given navigation
+     * Register the given navigation-admin
      * with the given key
      *
      * @param key
@@ -125,11 +125,11 @@ export class AdminNavigationService {
     }
 
     /**
-     * Unregister the navigation from the registry
+     * Unregister the navigation-admin from the registry
      * @param key
      */
     unregister(key): void {
-        // Check if the navigation exists
+        // Check if the navigation-admin exists
         if ( !this._registry[key] ) {
             console.warn(`The navigation with the key '${key}' doesn't exist in the registry.`);
         }
@@ -142,13 +142,13 @@ export class AdminNavigationService {
     }
 
     /**
-     * Get navigation from registry by key
+     * Get navigation-admin from registry by key
      *
      * @param key
      * @returns {any}
      */
     getNavigation(key): any {
-        // Check if the navigation exists
+        // Check if the navigation-admin exists
         if ( !this._registry[key] ) {
             console.warn(`The navigation with the key '${key}' doesn't exist in the registry.`);
 
@@ -160,7 +160,7 @@ export class AdminNavigationService {
     }
 
     /**
-     * Get flattened navigation array
+     * Get flattened navigation-admin array
      *
      * @param navigation
      * @param flatNavigation
@@ -185,7 +185,7 @@ export class AdminNavigationService {
     }
 
     /**
-     * Get the current navigation
+     * Get the current navigation-admin
      *
      * @returns {any}
      */
@@ -200,8 +200,8 @@ export class AdminNavigationService {
     }
 
     /**
-     * Set the navigation with the key
-     * as the current navigation
+     * Set the navigation-admin with the key
+     * as the current navigation-admin
      *
      * @param key
      */
@@ -213,7 +213,7 @@ export class AdminNavigationService {
             return;
         }
 
-        // Set the current navigation key
+        // Set the current navigation-admin key
         this._currentNavigationKey = key;
 
         // Notify the subject
@@ -221,8 +221,8 @@ export class AdminNavigationService {
     }
 
     /**
-     * Get navigation item by id from the
-     * current navigation
+     * Get navigation-admin item by id from the
+     * current navigation-admin
      *
      * @param id
      * @param {any} navigation
@@ -251,7 +251,7 @@ export class AdminNavigationService {
     }
 
     /**
-     * Get the parent of the navigation item
+     * Get the parent of the navigation-admin item
      * with the id
      *
      * @param id
@@ -282,16 +282,16 @@ export class AdminNavigationService {
     }
 
     /**
-     * Add a navigation item to the specified location
+     * Add a navigation-admin item to the specified location
      *
      * @param item
      * @param id
      */
     addNavigationItem(item, id): void {
-        // Get the current navigation
+        // Get the current navigation-admin
         const navigation: any[] = this.getCurrentNavigation();
 
-        // Add to the end of the navigation
+        // Add to the end of the navigation-admin
         if ( id === 'end' ) {
             navigation.push(item);
 
@@ -301,7 +301,7 @@ export class AdminNavigationService {
             return;
         }
 
-        // Add to the start of the navigation
+        // Add to the start of the navigation-admin
         if ( id === 'start' ) {
             navigation.unshift(item);
 
@@ -330,21 +330,21 @@ export class AdminNavigationService {
     }
 
     /**
-     * Update navigation item with the given id
+     * Update navigation-admin item with the given id
      *
      * @param id
      * @param properties
      */
     updateNavigationItem(id, properties): void {
-        // Get the navigation item
+        // Get the navigation-admin item
         const navigationItem = this.getNavigationItem(id);
 
-        // If there is no navigation with the give id, return
+        // If there is no navigation-admin with the give id, return
         if ( !navigationItem ) {
             return;
         }
 
-        // Merge the navigation properties
+        // Merge the navigation-admin properties
         _.merge(navigationItem, properties);
 
         // Trigger the observable
@@ -352,7 +352,7 @@ export class AdminNavigationService {
     }
 
     /**
-     * Remove navigation item with the given id
+     * Remove navigation-admin item with the given id
      *
      * @param id
      */
@@ -368,7 +368,7 @@ export class AdminNavigationService {
         let parent = this.getNavigationItemParent(id);
 
         // This check is required because of the first level
-        // of the navigation, since the first level is not
+        // of the navigation-admin, since the first level is not
         // inside the 'children' array
         parent = parent.children || parent;
 

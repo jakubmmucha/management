@@ -41,22 +41,22 @@ export class AdminNavigationComponent implements OnInit {
      * On init
      */
     ngOnInit(): void {
-        // Load the navigation either from the input or from the service
+        // Load the navigation-admin either from the input or from the service
         this.navigation = this.navigation || this._fuseNavigationService.getCurrentNavigation();
 
-        // Subscribe to the current navigation changes
+        // Subscribe to the current navigation-admin changes
         this._fuseNavigationService.onNavigationChanged
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe(() => {
 
-                // Load the navigation
+                // Load the navigation-admin
                 this.navigation = this._fuseNavigationService.getCurrentNavigation();
 
                 // Mark for check
                 this._changeDetectorRef.markForCheck();
             });
 
-        // Subscribe to navigation item
+        // Subscribe to navigation-admin item
         merge(
             this._fuseNavigationService.onNavigationItemAdded,
             this._fuseNavigationService.onNavigationItemUpdated,

@@ -64,7 +64,7 @@ export class AdminShortcutsComponent implements OnInit, AfterViewInit, OnDestroy
      * On init
      */
     ngOnInit(): void {
-        // Get the navigation items and flatten them
+        // Get the navigation-admin items and flatten them
         this.filteredNavigationItems = this.navigationItems = this._fuseNavigationService.getFlatNavigation(this.navigation);
 
         if ( this._cookieService.check('FUSE2.shortcuts') ) {

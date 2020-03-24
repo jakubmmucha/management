@@ -15,6 +15,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MemberModule} from './member/member.module';
 import {LayoutModule } from 'src/app/layout/layout.module';
 import {LoginModule} from './main/pages/authentication/login/login.module';
+import {RegisterModule} from './main/pages/authentication/register/register.module';
 
 import { fuseConfig } from 'src/app/admin-config';
 
@@ -53,6 +54,7 @@ import {FormsModule} from '@angular/forms';
     AdminSharedModule,
     AdminModule,
     LoginModule,
+    RegisterModule,
     FormsModule,
     RouterModule.forRoot(routes, { useHash: false, anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' }),
       // Material moment date module

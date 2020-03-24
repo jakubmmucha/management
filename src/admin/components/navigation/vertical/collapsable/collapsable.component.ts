@@ -66,7 +66,7 @@ export class AdminNavVerticalCollapsableComponent implements OnInit, OnDestroy {
                 }
             });
 
-        // Listen for collapsing of any navigation item
+        // Listen for collapsing of any navigation-admin item
         this._fuseNavigationService.onItemCollapsed
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe(
@@ -100,7 +100,7 @@ export class AdminNavVerticalCollapsableComponent implements OnInit, OnDestroy {
             this.collapse();
         }
 
-        // Subscribe to navigation item
+        // Subscribe to navigation-admin item
         merge(
             this._fuseNavigationService.onNavigationItemAdded,
             this._fuseNavigationService.onNavigationItemUpdated,
@@ -142,7 +142,7 @@ export class AdminNavVerticalCollapsableComponent implements OnInit, OnDestroy {
     }
 
     /**
-     * Expand the collapsable navigation
+     * Expand the collapsable navigation-admin
      */
     expand(): void {
         if ( this.isOpen ) {
@@ -158,7 +158,7 @@ export class AdminNavVerticalCollapsableComponent implements OnInit, OnDestroy {
     }
 
     /**
-     * Collapse the collapsable navigation
+     * Collapse the collapsable navigation-admin
      */
     collapse(): void {
         if ( !this.isOpen ) {

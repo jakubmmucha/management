@@ -7,7 +7,7 @@ import * as _ from 'lodash';
 import { AdminConfigService } from 'src/admin/services/config.service';
 import { AdminSidebarService } from 'src/admin/components/sidebar/sidebar.service';
 
-import { navigation } from 'src/app/navigation/navigation';
+import { navigation } from 'src/app/navigation-admin/navigation';
 
 @Component({
     selector     : 'toolbar',
