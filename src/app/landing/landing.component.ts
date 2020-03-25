@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ColorScssService } from '../shared/service/color-scss.service';
+import { ColorScssService } from '../shared-member/service/color-scss.service';
 
 @Component({
   selector: 'app-landing',
@@ -12,7 +12,7 @@ export class LandingComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.colorPicker.setColorScheme('landing');
+    this.colorPicker.setColorScheme('gym');
   }
 
 

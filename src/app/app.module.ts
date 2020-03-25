@@ -9,15 +9,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ScrollToModule } from 'ng2-scroll-to-el';
-import { SharedModule } from './shared/shared.module';
+import { SharedModule } from './shared-member/shared.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
-import {MemberModule} from './member/member.module';
-import {LayoutModule } from 'src/app/layout/layout.module';
-import {LoginModule} from './main/pages/authentication/login/login.module';
-import {RegisterModule} from './main/pages/authentication/register/register.module';
+import {MemberModule} from './member-pages/member.module';
+import {LayoutModule } from 'src/app/layout-admin/layout.module';
+import {LoginModule} from './authentification-pages/pages/login/login.module';
+import {RegisterModule} from './authentification-pages/pages/register/register.module';
 
-import { fuseConfig } from 'src/app/admin-config';
+import { adminConfig } from 'src/app/admin-config';
 
 
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
@@ -65,7 +65,7 @@ import {FormsModule} from '@angular/forms';
       MatIconModule,
 
       // Admin modules
-      AdminModule.forRoot(fuseConfig),
+      AdminModule.forRoot(adminConfig),
       AdminProgressBarModule,
       AdminSharedModule,
       AdminSidebarModule,

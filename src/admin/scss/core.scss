@@ -1,5 +1,5 @@
 // This file meant to be imported only once! Use admin.scss to access
-// to the core Fuse and Angular Material mixins
+// to the core Admin and Angular Material mixins
 
 // ngx-datatable
 @import '~@swimlane/ngx-datatable/release/themes/material';
@@ -8,7 +8,7 @@
 @import '~perfect-scrollbar/css/perfect-scrollbar';
 
 // Fuse
-@import "fuse";
+@import "admin";
 
 // Theme
 @import "theme";

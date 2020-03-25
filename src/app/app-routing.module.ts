@@ -1,19 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LandingComponent } from './landing/landing.component';
-import {GymComponent} from './member/gym/gym.component';
-import {LoginComponent} from './main/pages/authentication/login/login.component';
-import {RegisterComponent} from './main/pages/authentication/register/register.component';
+import {GymComponent} from './member-pages/gym-home_page/gym-home.component';
+import {LoginComponent} from './authentification-pages/pages/login/login.component';
+import {RegisterComponent} from './authentification-pages/pages/register/register.component';
+import {GymInsideGymPageComponent} from './member-pages/gym-inside-gym-page/gym-inside-gym-page.component';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'auth/login',
+    redirectTo: 'gym',
     pathMatch: 'full',
   },
   {
     path: 'gym',
     component: GymComponent
+  },
+  {
+    path: 'inside',
+    component: GymInsideGymPageComponent
   },
   {
     path: 'landing',

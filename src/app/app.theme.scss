@@ -80,15 +80,12 @@ $typography: mat-typography-config(
 // Import app and page component themes here to enable theming for them
 
 
-@import "src/app/main/pages/authentication/login/login.theme";
-@import "src/app/main/pages/authentication/register/register.theme";
-@import "src/app/main/pages/authentication/register-2/register-2.theme";
-@import "src/app/main/pages/authentication/reset-password/reset-password.theme";
-@import "src/app/main/pages/authentication/reset-password-2/reset-password-2.theme";
-@import "src/app/main/pages/authentication/forgot-password/forgot-password.theme";
-@import "src/app/main/pages/authentication/forgot-password-2/forgot-password-2.theme";
-@import "src/app/main/pages/authentication/lock/lock.theme";
-@import "src/app/main/pages/authentication/mail-confirm/mail-confirm.theme";
+@import "src/app/authentification-pages/pages/login/login.theme";
+@import "src/app/authentification-pages/pages/register/register.theme";
+@import "src/app/authentification-pages/pages/reset-password/reset-password.theme";
+@import "src/app/authentification-pages/pages/forgot-password/forgot-password.theme";
+@import "src/app/authentification-pages/pages/lock/lock.theme";
+@import "src/app/authentification-pages/pages/mail-confirm/mail-confirm.theme";
 
 
 // Define a mixin for easier access
@@ -103,11 +100,8 @@ $typography: mat-typography-config(
     // Pages
     @include login-theme($theme);
     @include register-theme($theme);
-    @include register-2-theme($theme);
     @include reset-password-theme($theme);
-    @include reset-password-2-theme($theme);
     @include forgot-password-theme($theme);
-    @include forgot-password-2-theme($theme);
 
 
     // UI

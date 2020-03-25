@@ -8,7 +8,7 @@ import { AdminConfig } from 'src/admin/types';
  * constructor method to learn more about changing these options per component basis.
  */
 
-export const fuseConfig: AdminConfig = {
+export const adminConfig: AdminConfig = {
     // Color themes can be defined in src/app/app.theme.scss
     colorTheme      : 'theme-default',
     customScrollbars: true,
