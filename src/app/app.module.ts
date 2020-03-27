@@ -32,6 +32,7 @@ import 'hammerjs';
 
 import { AdminProgressBarModule, AdminSidebarModule, AdminThemeOptionsModule } from 'src/admin/components';
 import {FormsModule} from '@angular/forms';
+import {SampleModule} from './main/sample/sample.module';
 
 
 
@@ -54,9 +55,11 @@ import {FormsModule} from '@angular/forms';
     AdminSharedModule,
     AdminModule,
     LoginModule,
+    SampleModule,
     RegisterModule,
     FormsModule,
     RouterModule.forRoot(routes, { useHash: false, anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' }),
+    TranslateModule.forRoot(),
       // Material moment date module
       MatMomentDateModule,
 

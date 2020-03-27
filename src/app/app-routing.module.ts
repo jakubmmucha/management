@@ -5,6 +5,7 @@ import {GymComponent} from './member-pages/gym-home_page/gym-home.component';
 import {LoginComponent} from './authentification-pages/pages/login/login.component';
 import {RegisterComponent} from './authentification-pages/pages/register/register.component';
 import {GymInsideGymPageComponent} from './member-pages/gym-inside-gym-page/gym-inside-gym-page.component';
+import {SampleComponent} from './main/sample/sample.component';
 
 export const routes: Routes = [
   {
@@ -15,6 +16,10 @@ export const routes: Routes = [
   {
     path: 'gym',
     component: GymComponent
+  },
+  {
+    path: 'sample',
+    component: SampleComponent
   },
   {
     path: 'inside',

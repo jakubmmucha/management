@@ -86,13 +86,16 @@ $typography: mat-typography-config(
 @import "src/app/authentification-pages/pages/forgot-password/forgot-password.theme";
 @import "src/app/authentification-pages/pages/lock/lock.theme";
 @import "src/app/authentification-pages/pages/mail-confirm/mail-confirm.theme";
+@import "src/app/layout-admin/components/toolbar/toolbar.theme";
+@import "src/app/layout-admin/components/chat-panel/chat-panel.theme";
 
 
 // Define a mixin for easier access
 @mixin components-theme($theme) {
 
     // Layout components
-
+  @include chat-panel-theme($theme);
+  @include toolbar-theme($theme);
 
     // Apps
 
