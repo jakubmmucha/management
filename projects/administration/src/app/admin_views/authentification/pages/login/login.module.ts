@@ -8,7 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { AdminSharedModule } from '/../projects/admin/shared.module';
 import { Routes, RouterModule } from '@angular/router';
 import {ReactiveFormsModule} from '@angular/forms';
-import {MatFormFieldModule} from '@angular/material';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import {LoginComponent} from './login.component';
 
 

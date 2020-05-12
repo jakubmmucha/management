@@ -10,7 +10,6 @@ import { SharedMemberModule } from '../shared-member/shared-member.module';
 import { CountToModule } from 'angular-count-to';
 import { GalleryModule } from '@ks89/angular-modal-gallery';
 import { AngularTiltModule } from 'angular-tilt';
-import 'hammerjs';
 import 'mousetrap';
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { MasonryGalleryModule } from 'ngx-masonry-gallery';

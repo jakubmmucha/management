@@ -8,7 +8,8 @@ import {SampleModule} from './dashboard/sample.module';
 import {RegisterModule} from './authentification/pages/register/register.module';
 import {CommonModule} from '@angular/common';
 import {ReactiveFormsModule} from '@angular/forms';
-import {MatCheckboxModule, MatIconModule} from '@angular/material';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 
