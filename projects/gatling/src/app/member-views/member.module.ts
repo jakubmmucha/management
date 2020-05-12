@@ -85,7 +85,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {};
 @NgModule({
 
   declarations: [GymComponent, ProfileDetailsComponent, FormsComponent, LoginComponent, PersonalInformationComponent, CheckoutComponent, BreadcrumbBigTypographyComponent, SignUpComponent, AccountViewComponent, GymNavComponent, GymHeaderComponent, GymAboutComponent, GymScheduleComponent,
-    GymWorkoutAboutComponent, GymCounterComponent, GymTrainerComponent, GymTestimonialComponent, GymPricingComponent,
+    GymWorkoutAboutComponent, GymCounterComponent, GymTrainerComponent, GymTestimonialComponent, GymPricingComponent, TabsComponent,
     GymBMIComponent, GymBrandComponent, GymFooterComponent, GymCopyrightComponent, EcommerceHeaderComponent, GymInsideGymPageComponent, GymInsideGymPageComponent, GymMembershipPageComponent, GymOpeningTimesPageComponent, GymBlogPageComponent, GymShopPageComponent, TryComponent, TabsComponent],
 
   imports: [
@@ -112,7 +112,6 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {};
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AdminLayoutModule,
     FlexLayoutModule,
   ],
   providers: [

@@ -2,11 +2,11 @@ import { Component, HostBinding, HostListener, Input, OnDestroy, OnInit } from '
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { fuseAnimations } from '/../projects/admin/animations';
 import { AdminConfigService } from '/../projects/admin/services/config.service';
+import {fuseAnimations} from '../../../../animations';
 
 @Component({
-    selector   : 'fuse-nav-horizontal-collapsable',
+    selector   : 'app-nav-horizontal-collapsable',
     templateUrl: './collapsable.component.html',
     styleUrls  : ['./collapsable.component.scss'],
     animations : fuseAnimations

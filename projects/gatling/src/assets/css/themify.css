@@ -2,8 +2,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'themify';
-  src: url("src/assets/fonts/themify.eot?-fvbane");
-  src: url("src/assets/fonts/themify.eot?#iefix-fvbane") format("embedded-opentype"), url("src/assets/fonts/themify.woff?-fvbane") format("woff"), url("../fonts//themify.ttf?-fvbane") format("truetype"), url("src/assets/fonts/themify.svg?-fvbane#themify") format("svg");
+  src: url("projects/gatling/src/assets/fonts/themify.eot?-fvbane");
+  src: url("projects/gatling/src/assets/fonts/themify.eot?#iefix-fvbane") format("embedded-opentype"), url("projects/gatling/src/assets/fonts/themify.woff?-fvbane") format("woff"), url("../fonts/themify.ttf?-fvbane") format("truetype"), url("projects/gatling/src/assets/fonts/themify.svg?-fvbane#themify") format("svg");
   font-weight: normal;
   font-style: normal; }
 

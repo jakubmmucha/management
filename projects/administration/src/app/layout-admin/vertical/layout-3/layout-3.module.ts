@@ -8,9 +8,11 @@ import { ContentModule } from '/../projects/administration/src/app/layout-admin/
 import { FooterModule } from '/../projects/administration/src/app/layout-admin/components/footer/footer.module';
 import { NavbarModule } from '/../projects/administration/src/app/layout-admin/components/navbar/navbar.module';
 import { QuickPanelModule } from '/../projects/administration/src/app/layout-admin/components/quick-panel/quick-panel.module';
-import { ToolbarModule } from '/../projects/administration/src/app/layout-admin/components/toolbar/toolbar.module';
 
-import { VerticalLayout3Component } from '/../projects/administration/src/app/layout-admin/vertical/layout-3/layout-3.component';
+import {VerticalLayout3Component} from './layout-3.component';
+import {ToolbarModule} from '../../components/toolbar/toolbar.module';
+
+
 
 @NgModule({
     declarations: [

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { AdminSidebarModule } from '/../projects/admin/components';
 import { AdminSharedModule } from '/../projects/admin/shared.module';
 
 import { ContentModule } from '/../projects/administration/src/app/layout-admin/components/content/content.module';
@@ -10,7 +9,8 @@ import { NavbarModule } from '/../projects/administration/src/app/layout-admin/c
 import { QuickPanelModule } from '/../projects/administration/src/app/layout-admin/components/quick-panel/quick-panel.module';
 import { ToolbarModule } from '/../projects/administration/src/app/layout-admin/components/toolbar/toolbar.module';
 
-import { VerticalLayout2Component } from '/../projects/administration/src/app/layout-admin/vertical/layout-2/layout-2.component';
+import {AdminSidebarModule} from '../../../../../../admin/components';
+import {VerticalLayout2Component} from './layout-2.component';
 
 @NgModule({
     declarations: [

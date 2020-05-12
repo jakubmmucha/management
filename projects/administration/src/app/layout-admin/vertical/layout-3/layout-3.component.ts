@@ -3,7 +3,7 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 import { AdminConfigService } from '/../projects/admin/services/config.service';
-import { navigation } from '/../projects/administration/src/app/navigation-admin/navigation';
+import {navigation} from '../../../navigation-admin/navigation';
 
 @Component({
     selector     : 'vertical-layout-3',

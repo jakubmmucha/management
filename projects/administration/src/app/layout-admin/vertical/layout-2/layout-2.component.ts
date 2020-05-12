@@ -3,7 +3,7 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 
-import { navigation } from '/../projects/administration/src/app/navigation-admin/navigation';
+import {navigation} from '../../../navigation-admin/navigation';
 import {AdminConfigService} from '../../../../../../admin/services/config.service';
 
 @Component({

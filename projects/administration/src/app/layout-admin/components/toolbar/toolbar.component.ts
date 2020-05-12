@@ -5,7 +5,7 @@ import { TranslateService } from '@ngx-translate/core';
 import * as _ from 'lodash';
 
 
-import { navigation } from '../../../navigation-admin/navigation';
+import { navigation } from './../../../navigation-admin/navigation';
 import {AdminConfigService} from '../../../../../../admin/services/config.service';
 import {AdminSidebarService} from '../../../../../../admin/components/sidebar/sidebar.service';
 

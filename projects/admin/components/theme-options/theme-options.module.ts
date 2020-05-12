@@ -12,11 +12,11 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
-import { AdminDirectivesModule } from '/../projects/admin/directives/directives';
-import { AdminMaterialColorPickerModule } from '/../projects/admin/components/material-color-picker/material-color-picker.module';
 import { AdminSidebarModule } from '/../projects/admin/components/sidebar/sidebar.module';
 
 import { AdminThemeOptionsComponent } from '/../projects/admin/components/theme-options/theme-options.component';
+import {AdminMaterialColorPickerModule} from '..';
+import {AdminDirectivesModule} from '../../directives/directives';
 
 @NgModule({
     declarations: [
