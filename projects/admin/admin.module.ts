@@ -10,7 +10,7 @@ export class AdminModule {
         }
     }
 
-    static forRoot(config): ModuleWithProviders {
+    static forRoot(config): ModuleWithProviders<AdminModule> {
         return {
             ngModule : AdminModule,
             providers: [
