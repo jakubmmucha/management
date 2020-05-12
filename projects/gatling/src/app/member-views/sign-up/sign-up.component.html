@@ -1,0 +1,180 @@
+<app-ecommerce-header></app-ecommerce-header>
+<!-- breadcrumb section start -->
+<section class="breadcrumb-section-main inner-2 breadcrumb-section-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumb-contain ">
+                        <div>
+                            <h2 class="breadcrumb-txt">Register</h2>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="javascript:void()">Register</a></li>
+                                <li><a href="javascript:void()"><i class="fa fa-angle-double-right"></i>Register</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<h3 class="text-center">Create your account</h3>
+<div class="app-body">
+  <main class="main d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card mx-4">
+            <div class="card-body p-4">
+              <form>
+                <h1>Register</h1>
+                <p class="text-muted">Create your account</p>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-user"></i></span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Username" autocomplete="username" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">@</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Email" autocomplete="email" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-lock"></i></span>
+                  </div>
+                  <input type="password" class="form-control" placeholder="Password" autocomplete="new-password" required>
+                </div>
+                <div class="input-group mb-4">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-lock"></i></span>
+                  </div>
+                  <input type="password" class="form-control" placeholder="Repeat password" autocomplete="new-password" required>
+                </div>
+                <button type="button" class="btn btn-block btn-success">Create Account</button>
+              </form>
+            </div>
+            <div class="card-footer p-4">
+              <div class="row">
+                <div class="col-6">
+                  <button class="btn btn-block btn-facebook" type="button"><span>facebook</span></button>
+                </div>
+                <div class="col-6">
+                  <button class="btn btn-block btn-twitter" type="button"><span>twitter</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- section start -->
+<section class="register-page section-b-space">
+  <div class="container">
+      <div class="row">
+        <div class="col-lg-2"></div>
+          <div class="col-md-8">
+              <h3 class="text-center">Create your account</h3>
+              <div class="theme-card">
+                  <form *ngIf="!isSuccessful"
+                           name="form"
+                           (ngSubmit)="f.form.valid && onSubmit()"
+                           #f="ngForm"
+                           novalidate class="theme-form">
+                      <div class="form-row">
+                        <div class="col-lg-3"></div>
+                          <div class="col-lg-6">
+                              <div class="form-group">
+                              <label for="email">Your Name</label>
+                              <input  type="text"
+                                      class="form-control"
+                                      name="username"
+                                      [(ngModel)]="form.username"
+                                      required
+                                      minlength="3"
+                                      maxlength="20"
+                                      #username="ngModel"  id="fname" placeholder="Your name" required="">
+                                <div class="alert-danger" *ngIf="f.submitted && username.invalid">
+                                  <div *ngIf="username.errors.required">Username is required</div>
+                                  <div *ngIf="username.errors.minlength">
+                                    Username must be at least 3 characters
+                                  </div>
+                                  <div *ngIf="username.errors.maxlength">
+                                    Username must be at most 20 characters
+                                  </div>
+                                </div>
+
+                              </div>
+
+                               <div class="form-group">
+                              <label for="email">Email</label>
+                              <input type="email"
+                                     class="form-control"
+                                     name="email"
+                                     [(ngModel)]="form.email"
+                                     required
+                                     email
+                                     #email="ngModel" id="email" placeholder="Email" required="">
+                                 <div class="alert-danger" *ngIf="f.submitted && email.invalid">
+                                   <div *ngIf="email.errors.required">Email is required</div>
+                                   <div *ngIf="email.errors.email">
+                                     Email must be a valid email address
+                                   </div>
+                                 </div>
+                               </div>
+
+
+                              <div class="form-group">
+                              <label for="review">Password</label>
+                              <input type="password"
+                                     class="form-control"
+                                     name="password"
+                                     [(ngModel)]="form.password"
+                                     required
+                                     minlength="6"
+                                     #password="ngModel" placeholder="Enter your password" required="">
+                              </div>
+
+
+                              <div class="form-group">
+                              <label for="review">Confirm Password</label>
+                              <input type="password"
+                                     class="form-control"
+                                     name="password"
+                                     [(ngModel)]="form.password"
+                                     required
+                                     minlength="6"
+                                     #password="ngModel" id="review" placeholder="Enter your password" required="">
+                                <div class="alert-danger" *ngIf="f.submitted && password.invalid">
+                                  <div *ngIf="password.errors.required">Password is required</div>
+                                  <div *ngIf="password.errors.minlength">
+                                    Password must be at least 6 characters
+                                  </div>
+                                </div>
+                              </div>
+
+                                <div class="form-group">
+                                  <button class="btn btn-primary btn-block">Sign Up</button>
+                            </div>
+                            <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+                              Signup failed!<br />{{ errorMessage }}
+                            </div>
+
+                          </div>
+                      </div>
+                  </form>
+                <div class="alert alert-success" *ngIf="isSuccessful">
+                  Your registration is successful!
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!--Section ends-->
