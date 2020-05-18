@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
+import {AdminSidebarComponent} from './sidebar.component';
 
-import { AdminSidebarComponent } from './sidebar.component';
+
 
 @Injectable({
     providedIn: 'root'

@@ -1,8 +1,10 @@
 import { Component, EventEmitter, forwardRef, Input, Output, ViewEncapsulation } from '@angular/core';
 
-import { fuseAnimations } from '/../projects/admin/animations';
-import { MatColors } from '/../projects/admin/mat-colors';
+
+
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import {fuseAnimations} from '../../animations';
+import {MatColors} from '../../mat-colors';
 
 export const FUSE_MATERIAL_COLOR_PICKER_VALUE_ACCESSOR: any = {
     provide    : NG_VALUE_ACCESSOR,

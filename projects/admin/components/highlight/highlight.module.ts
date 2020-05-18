@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
+import {AdminHighlightComponent} from './highlight.component';
 
-import { AdminHighlightComponent } from '/../projects/admin/components/highlight/highlight.component';
+
+
 
 @NgModule({
     declarations: [

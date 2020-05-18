@@ -2,9 +2,12 @@ import { ChangeDetectorRef, Component, HostBinding, Input, OnDestroy, OnInit } f
 import { NavigationEnd, Router } from '@angular/router';
 import { merge, Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
-import { AdminNavigationItem } from '/../projects/admin/types';
-import { fuseAnimations } from '/../projects/admin/animations';
-import { AdminNavigationService } from '/../projects/admin/components/navigation/navigation.service';
+import {fuseAnimations} from '../../../../animations';
+import {AdminNavigationItem} from '../../../../types';
+import {AdminNavigationService} from '../../navigation.service';
+
+
+
 
 @Component({
     selector   : 'fuse-nav-vertical-collapsable',

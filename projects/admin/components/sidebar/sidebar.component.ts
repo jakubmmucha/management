@@ -5,10 +5,11 @@ import { animate, AnimationBuilder, AnimationPlayer, style } from '@angular/anim
 import { MediaObserver } from '@angular/flex-layout';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import {AdminConfigService} from '../../services/config.service';
+import {AdminMatchMediaService} from '../../services/match-media.service';
+import {AdminSidebarService} from './sidebar.service';
 
-import { AdminSidebarService } from './sidebar.service';
-import { AdminMatchMediaService } from '/../projects/admin/services/match-media.service';
-import { AdminConfigService } from '/../projects/admin/services/config.service';
+
 
 @Component({
     selector     : 'fuse-sidebar',

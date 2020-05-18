@@ -1,5 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { AdminUtils } from '/../projects/admin/utils';
+import {AdminUtils} from '../utils';
+
 
 @Pipe({name: 'filter'})
 export class FilterPipe implements PipeTransform {

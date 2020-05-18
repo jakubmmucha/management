@@ -3,9 +3,9 @@ import {AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, 
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/internal/operators';
 
-import {AdminConfigService} from '/../projects/admin/services/config.service';
-import {fuseAnimations} from '/../projects/admin/animations';
 import {AuthService} from '../../../../_services/auth.service';
+import {fuseAnimations} from '../../../../../../../admin/animations';
+import {AdminConfigService} from '../../../../../../../admin/services/config.service';
 
 @Component({
     selector     : 'register',

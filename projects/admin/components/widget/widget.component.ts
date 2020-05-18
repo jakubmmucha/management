@@ -1,6 +1,6 @@
 import { AfterContentInit, Component, ContentChildren,
   ElementRef, HostBinding, QueryList, Renderer2, ViewEncapsulation } from '@angular/core';
-import { AdminWidgetToggleDirective } from './widget-toggle.directive';
+import {AdminWidgetToggleDirective} from './widget-toggle.directive';
 
 @Component({
     selector     : 'fuse-widget',

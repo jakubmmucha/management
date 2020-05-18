@@ -1,8 +1,9 @@
 import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import {AdminConfigService} from '../../services/config.service';
 
-import { AdminConfigService } from '/../projects/admin/services/config.service';
+
 
 @Component({
     selector   : 'fuse-search-bar',

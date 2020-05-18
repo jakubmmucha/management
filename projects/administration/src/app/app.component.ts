@@ -1,12 +1,15 @@
 import {Component, Inject, OnDestroy, OnInit} from '@angular/core';
-import { AdminConfigService } from '/../projects/admin/services/config.service';
+
 import { DOCUMENT } from '@angular/common';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 import {Platform} from '@angular/cdk/platform';
-import { AdminNavigationService } from '/../projects/admin/components/navigation/navigation.service';
-import { AdminSidebarService } from '/../projects/admin/components/sidebar/sidebar.service';
-import { navigation } from './navigation-admin/navigation';
+import {AdminNavigationService} from '../../../admin/components/navigation/navigation.service';
+import {AdminSidebarService} from '../../../admin/components/sidebar/sidebar.service';
+import {navigation} from './navigation-admin/navigation';
+import {AdminConfigService} from '../../../admin/services/config.service';
+
+
 
 
 

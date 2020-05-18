@@ -2,8 +2,9 @@ import { Component, HostBinding, HostListener, Input, OnDestroy, OnInit } from '
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { AdminConfigService } from '/../projects/admin/services/config.service';
+
 import {fuseAnimations} from '../../../../animations';
+import {AdminConfigService} from '../../../../services/config.service';
 
 @Component({
     selector   : 'app-nav-horizontal-collapsable',

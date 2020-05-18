@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import {ContentComponent} from './content.component';
+import {AdminSharedModule} from '../../../../../../admin/shared.module';
 
-import { AdminSharedModule } from '/../projects/admin/shared.module';
 
-import { ContentComponent } from '/../projects/administration/src/app/layout-admin/components/content/content.component';
 
 @NgModule({
     declarations: [

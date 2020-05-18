@@ -6,6 +6,7 @@ import {HorizontalLayout1Module} from './horizontal/layout-1/layout-1.module';
 
 
 
+
 @NgModule({
     imports: [
         VerticalLayout1Module,

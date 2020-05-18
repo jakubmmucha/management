@@ -2,11 +2,11 @@ import { Component, OnDestroy, OnInit, ViewChild, ViewEncapsulation } from '@ang
 import { NavigationEnd, Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { delay, filter, take, takeUntil } from 'rxjs/operators';
+import {AdminPerfectScrollbarDirective} from '../../../../../../../../admin/directives/admin-perfect-scrollbar/admin-perfect-scrollbar.directive';
+import {AdminConfigService} from '../../../../../../../../admin/services/config.service';
+import {AdminNavigationService} from '../../../../../../../../admin/components/navigation/navigation.service';
+import {AdminSidebarService} from '../../../../../../../../admin/components/sidebar/sidebar.service';
 
-import { AdminConfigService } from '/../projects/admin/services/config.service';
-import { AdminNavigationService } from '/../projects/admin/components/navigation/navigation.service';
-import { AdminPerfectScrollbarDirective } from '/../projects/admin/directives/admin-perfect-scrollbar/admin-perfect-scrollbar.directive';
-import { AdminSidebarService } from '/../projects/admin/components/sidebar/sidebar.service';
 
 @Component({
     selector     : 'navbar-vertical-style-2',

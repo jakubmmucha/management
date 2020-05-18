@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { AdminSidebarModule } from '/../projects/admin/components/index';
-import { AdminSharedModule } from '/../projects/admin/shared.module';
 
-import { ContentModule } from '/../projects/administration/src/app/layout-admin/components/content/content.module';
-import { FooterModule } from '/../projects/administration/src/app/layout-admin/components/footer/footer.module';
-import { NavbarModule } from '/../projects/administration/src/app/layout-admin/components/navbar/navbar.module';
-import { QuickPanelModule } from '/../projects/administration/src/app/layout-admin/components/quick-panel/quick-panel.module';
 
+import {AdminSidebarModule} from '../../../../../../admin/components';
 import {VerticalLayout3Component} from './layout-3.component';
+import {AdminSharedModule} from '../../../../../../admin/shared.module';
+import {ContentModule} from '../../components/content/content.module';
+import {FooterModule} from '../../components/footer/footer.module';
+import {NavbarModule} from '../../components/navbar/navbar.module';
+import {QuickPanelModule} from '../../components/quick-panel/quick-panel.module';
 import {ToolbarModule} from '../../components/toolbar/toolbar.module';
 
 

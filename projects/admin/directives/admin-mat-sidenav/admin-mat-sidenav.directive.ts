@@ -3,9 +3,9 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { MediaObserver } from '@angular/flex-layout';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import {AdminMatchMediaService} from '../../services/match-media.service';
+import {AdminMatSidenavHelperService} from './admin-mat-sidenav.service';
 
-import { AdminMatchMediaService } from '/../projects/admin/services/match-media.service';
-import { AdminMatSidenavHelperService } from '/../projects/admin/directives/admin-mat-sidenav/admin-mat-sidenav.service';
 
 @Directive({
     selector: '[fuseMatSidenavHelper]'

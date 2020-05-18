@@ -1,4 +1,5 @@
-import { AdminNavigation } from '/../projects/admin/types';
+import {AdminNavigation} from '../../../../admin/types';
+
 
 export const navigation: AdminNavigation[] = [
     {

@@ -5,9 +5,9 @@ import { fromEvent, Subject } from 'rxjs';
 import { debounceTime, filter, takeUntil } from 'rxjs/operators';
 import PerfectScrollbar from 'perfect-scrollbar';
 import * as _ from 'lodash';
-
-import { AdminConfigService } from '/../projects/admin/services/config.service';
+import {AdminConfigService} from '../../services/config.service';
 import {AdminPerfectScrollbarGeometry, AdminPerfectScrollbarPosition} from './admin-perfect-scrollbar.interfaces';
+
 
 @Directive({
     selector: '[adminPerfectScrollbar]'

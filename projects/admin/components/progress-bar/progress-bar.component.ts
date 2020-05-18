@@ -1,8 +1,9 @@
 import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import {AdminProgressBarService} from './progress-bar.service';
 
-import { AdminProgressBarService } from '/../projects/admin/components/progress-bar/progress-bar.service';
+
 
 @Component({
     selector     : 'fuse-progress-bar',

@@ -5,11 +5,12 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 
-import { AdminSharedModule } from '/../projects/admin/shared.module';
+
 import { Routes, RouterModule } from '@angular/router';
 import {ReactiveFormsModule} from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {LoginComponent} from './login.component';
+import {AdminSharedModule} from '../../../../../../../admin/shared.module';
 
 
 const routes: Routes = [

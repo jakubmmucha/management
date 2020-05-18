@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import * as _ from 'lodash';
+import {AdminNavigationItem} from '../../types';
 
-import { AdminNavigationItem } from '/../projects/admin/types';
 
 @Injectable({
     providedIn: 'root'

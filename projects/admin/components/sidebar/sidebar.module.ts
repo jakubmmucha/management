@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
+import {AdminSidebarComponent} from './sidebar.component';
 
-import { AdminSidebarComponent } from './sidebar.component';
+
 
 @NgModule({
     declarations: [

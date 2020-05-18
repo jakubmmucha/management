@@ -3,8 +3,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import {AdminPipesModule} from './pipes/pipes.module';
 import {AdminDirectivesModule} from './directives/directives';
+import {AdminPipesModule} from './pipes/pipes.module';
+
 
 
 @NgModule({

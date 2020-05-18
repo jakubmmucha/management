@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
+import {AdminConfigService} from '../../../../../../../../admin/services/config.service';
+import {AdminNavigationService} from '../../../../../../../../admin/components/navigation/navigation.service';
+import {AdminSidebarService} from '../../../../../../../../admin/components/sidebar/sidebar.service';
 
-import { AdminConfigService } from '/../projects/admin/services/config.service';
-import { AdminNavigationService } from '/../projects/admin/components/navigation/navigation.service';
-import { AdminSidebarService } from '/../projects/admin/components/sidebar/sidebar.service';
 
 @Component({
     selector     : 'navbar-horizontal-style-1',

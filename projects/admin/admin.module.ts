@@ -2,6 +2,7 @@ import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core
 import {ADMIN_CONFIG} from './services/config.service';
 
 
+
 @NgModule()
 export class AdminModule {
     constructor(@Optional() @SkipSelf() parentModule: AdminModule) {

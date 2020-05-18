@@ -1,9 +1,10 @@
 import { ChangeDetectorRef, Component, HostBinding, Input, OnDestroy, OnInit } from '@angular/core';
 import { merge, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import {AdminNavigationItem} from '../../../../types';
+import {AdminNavigationService} from '../../navigation.service';
 
-import { AdminNavigationItem } from '/../projects/admin/types';
-import { AdminNavigationService } from '/../projects/admin/components/navigation/navigation.service';
+
 
 @Component({
     selector   : 'fuse-nav-vertical-item',

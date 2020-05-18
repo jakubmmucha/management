@@ -5,8 +5,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { AdminPipesModule } from '/../projects/admin/pipes/pipes.module';
-import { AdminMaterialColorPickerComponent } from '/../projects/admin/components/material-color-picker/material-color-picker.component';
+import {AdminMaterialColorPickerComponent} from './material-color-picker.component';
+import {AdminPipesModule} from '../../pipes/pipes.module';
+
+
 
 @NgModule({
     declarations: [

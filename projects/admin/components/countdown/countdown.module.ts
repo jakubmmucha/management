@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
+import {AdminCountdownComponent} from './countdown.component';
 
-import { AdminCountdownComponent } from '/../projects/admin/components/countdown/countdown.component';
+
+
 
 @NgModule({
     declarations: [

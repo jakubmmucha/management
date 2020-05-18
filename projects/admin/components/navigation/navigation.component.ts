@@ -1,7 +1,9 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { merge, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { AdminNavigationService } from '/../projects/admin/components/navigation/navigation.service';
+import {AdminNavigationService} from './navigation.service';
+
+
 
 @Component({
     selector       : 'fuse-navigation',

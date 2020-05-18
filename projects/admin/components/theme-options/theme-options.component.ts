@@ -3,11 +3,12 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { DOCUMENT } from '@angular/common';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import {fuseAnimations} from '../../animations';
+import {AdminConfigService} from '../../services/config.service';
+import {AdminNavigationService} from '../navigation/navigation.service';
+import {AdminSidebarService} from '../sidebar/sidebar.service';
 
-import { fuseAnimations } from '/../projects/admin/animations';
-import { AdminConfigService } from '/../projects/admin/services/config.service';
-import { AdminNavigationService } from '/../projects/admin/components/navigation/navigation.service';
-import { AdminSidebarService } from '/../projects/admin/components/sidebar/sidebar.service';
+
 
 @Component({
     selector     : 'fuse-theme-options',

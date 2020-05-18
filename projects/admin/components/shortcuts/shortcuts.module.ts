@@ -11,8 +11,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { CookieService } from 'ngx-cookie-service';
+import {AdminShortcutsComponent} from './shortcuts.component';
 
-import { AdminShortcutsComponent } from './shortcuts.component';
+
 
 @NgModule({
     declarations: [

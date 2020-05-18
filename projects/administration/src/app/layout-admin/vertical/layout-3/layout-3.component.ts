@@ -2,8 +2,9 @@ import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { AdminConfigService } from '/../projects/admin/services/config.service';
+
 import {navigation} from '../../../navigation-admin/navigation';
+import {AdminConfigService} from '../../../../../../admin/services/config.service';
 
 @Component({
     selector     : 'vertical-layout-3',

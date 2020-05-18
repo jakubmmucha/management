@@ -1,8 +1,9 @@
 import { Directive, ElementRef, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import {AdminMatchMediaService} from '../../services/match-media.service';
 
-import { AdminMatchMediaService } from '/../projects/admin/services/match-media.service';
+
 
 @Directive({
     selector: '.inner-scroll'

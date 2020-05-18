@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import{navigation} from '../../../navigation-admin/navigation';
-import { AdminConfigService } from '/../projects/admin/services/config.service';
+import {AdminConfigService} from '../../../../../../admin/services/config.service';
+import { navigation } from '../../../navigation-admin/navigation';
 
 @Component({
     selector     : 'horizontal-layout-1',

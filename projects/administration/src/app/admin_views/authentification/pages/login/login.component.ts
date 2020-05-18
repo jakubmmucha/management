@@ -1,12 +1,14 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
-import { AdminConfigService } from '/../projects/admin/services/config.service';
-import { fuseAnimations } from '/../projects/admin/animations';
+
+
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import {AuthService} from '../../../../_services/auth.service';
 import {TokenStorageService} from '../../../../_services/token-storage.service';
+import {fuseAnimations} from '../../../../../../../admin/animations';
+import {AdminConfigService} from '../../../../../../../admin/services/config.service';
 
 @Component({
     selector     : 'login',

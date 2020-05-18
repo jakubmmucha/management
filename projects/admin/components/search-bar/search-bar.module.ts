@@ -4,8 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-
-import { AdminSearchBarComponent } from './search-bar.component';
+import {AdminSearchBarComponent} from './search-bar.component';
 
 @NgModule({
     declarations: [

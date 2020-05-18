@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
-import { AdminTranslationLoaderService } from '/../projects/admin/services/translation-loader.service';
 
 import { locale as english } from './i18n/en';
 import { locale as turkish } from './i18n/tr';
+import {AdminTranslationLoaderService} from '../../../../../admin/services/translation-loader.service';
 
 @Component({
   selector   : 'sample',

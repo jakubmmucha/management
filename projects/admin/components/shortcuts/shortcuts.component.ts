@@ -3,9 +3,11 @@ import { MediaObserver } from '@angular/flex-layout';
 import { CookieService } from 'ngx-cookie-service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import {AdminMatchMediaService} from '../../services/match-media.service';
+import {AdminNavigationService} from '../navigation/navigation.service';
 
-import { AdminMatchMediaService } from '/../projects/admin/services/match-media.service';
-import { AdminNavigationService } from '/../projects/admin/components/navigation/navigation.service';
+
+
 
 @Component({
     selector   : 'fuse-shortcuts',
