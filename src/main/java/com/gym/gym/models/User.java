@@ -47,6 +47,13 @@ public class User {
     @Email
     private String email;
 
+
+    @Column(name="phonenumber")
+    private String phonenumber;
+
+    @Column(name="gender")
+    private String gender;
+
     @NotBlank
     @Size(max = 120)
     private String password;
@@ -112,5 +119,35 @@ public class User {
 
     public void setLastname(String lastname) {
         this.lastname = lastname;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", email='" + email + '\'' +
+                ", phonenumber='" + phonenumber + '\'' +
+                ", gender='" + gender + '\'' +
+                ", roles=" + roles +
+                '}';
+    }
+
+    public String getPhonenumber() {
+        return phonenumber;
+    }
+
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber = phonenumber;
     }
 }
