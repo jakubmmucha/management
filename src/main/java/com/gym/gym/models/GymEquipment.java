@@ -1,45 +1,43 @@
 package com.gym.gym.models;
 
 
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "gymequipment",
         uniqueConstraints = @UniqueConstraint(columnNames = "nameofequipment"))
-public class GymEquipment {
+public class GymEquipment  implements Serializable {
+    private static final long serialVersionUID=425345L;
 
-
-    @OneToOne
-    @JoinColumn(name="imageid")
-    private FileDB fileDB;
-
-    public FileDB getFileDB() {
-        return fileDB;
+    public GymEquipment() {
     }
 
-    public GymEquipment(){
-    }
-    public GymEquipment(String nameofequipment, String type, String description){
+    public GymEquipment(String nameofequipment, String type, String description) {
     }
 
-
-
-
-    public void setFileDB(FileDB fileDB) {
-        this.fileDB = fileDB;
-    }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    public String getEquipmentimage() {
+        return equipmentimage;
+    }
 
+    public void setEquipmentimage(String equipmentimage) {
+        this.equipmentimage = equipmentimage;
+    }
+
+    private String equipmentimage;
 
 
     @NotBlank
     private String nameofequipment;
 
-    @NotBlank
+    @Column(columnDefinition = "text")
     private String description;
 
     private double price;
@@ -47,9 +45,8 @@ public class GymEquipment {
 
     private double taxRate;
 
-    @Column(name="brand")
-     private String brand;
-
+    @Column(name = "brand")
+    private String brand;
 
 
     private double priceTaxExcl;
@@ -57,6 +54,10 @@ public class GymEquipment {
 
     private int quantity;
     private String sku;
+
+
+    @Transient
+    private MultipartFile equipmentImage;
 
 
     //Getter and setters for Gym Equipment
@@ -69,6 +70,7 @@ public class GymEquipment {
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getNameofequipment() {
         return nameofequipment;
     }
@@ -97,12 +99,15 @@ public class GymEquipment {
     public double getTaxRate() {
         return taxRate;
     }
+
     public void setTaxRate(double taxRate) {
         this.taxRate = taxRate;
     }
+
     public String getBrand() {
         return brand;
     }
+
     public void setBrand(String brand) {
         this.brand = brand;
     }
@@ -139,4 +144,13 @@ public class GymEquipment {
     public void setSku(String sku) {
         this.sku = sku;
     }
+
+    public MultipartFile getEquipmentImage() {
+        return equipmentImage;
+    }
+
+    public void setEquipmentImage(MultipartFile equipmentImage) {
+        this.equipmentImage = equipmentImage;
+    }
+
 }

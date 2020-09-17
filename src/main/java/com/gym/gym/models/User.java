@@ -1,19 +1,29 @@
 package com.gym.gym.models;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
+import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
-@Table(	name = "users",
+@Table(name = "users",
         uniqueConstraints = {
                 @UniqueConstraint(columnNames = "username"),
                 @UniqueConstraint(columnNames = "email")
         })
-public class User {
+public class User implements Serializable {
+    private static final long serialVersionUID = 902783495L;
+
     public User() {
     }
 
@@ -54,6 +64,11 @@ public class User {
     @Column(name="gender")
     private String gender;
 
+    private Date dob;
+
+
+    private String healthdescription;
+
     @NotBlank
     @Size(max = 120)
     private String password;
@@ -63,6 +78,18 @@ public class User {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
+
+
+    @OneToMany(cascade=CascadeType.ALL, mappedBy = "user")
+    private List<BillingInformation> userBillingList;
+    @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,property = "id")
+    public List<BillingInformation> getUserBillingList() {
+        return userBillingList;
+    }
+    public void setUserBillingList(List<BillingInformation> userBillingList) {
+        this.userBillingList = userBillingList;
+    }
+
 
 
     public Long getId() {
@@ -128,6 +155,29 @@ public class User {
     public void setGender(String gender) {
         this.gender = gender;
     }
+    public Date getDob() {
+        return dob;
+    }
+
+    public void setDob(Date dob) {
+        this.dob = dob;
+    }
+    public String getPhonenumber() {
+        return phonenumber;
+    }
+
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber = phonenumber;
+    }
+
+    public String getHealthdescription() {
+        return healthdescription;
+    }
+
+    public void setHealthdescription(String healthdescription) {
+        this.healthdescription = healthdescription;
+    }
+
 
     @Override
     public String toString() {
@@ -143,11 +193,5 @@ public class User {
                 '}';
     }
 
-    public String getPhonenumber() {
-        return phonenumber;
-    }
 
-    public void setPhonenumber(String phonenumber) {
-        this.phonenumber = phonenumber;
-    }
 }
