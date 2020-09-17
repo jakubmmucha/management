@@ -1,0 +1,217 @@
+<section class="portfolio-section portfolio-metro zoom-gallery">
+  <div class="filter-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="filter-container isotopeFilters">
+            <ul class="list-inline filter">
+              <li [ngClass]="{'active': tabsPicker == 'personal' }"><a (click)="openGallery('personal')">Personal </a></li>
+              <li [ngClass]="{'active': tabsPicker == 'bilingInformation' }"><a (click)="openGallery('bilingInformation')">Billing Information</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="isotopeContainer row">
+        <ng-container *ngIf="tabsPicker=='personal'">
+          <div class="col-md-12 center">
+            <div class="card">
+              <div class="card-header">
+                <strong class="center-content">Personal Information</strong>
+              </div>
+              <div class="card-body">
+                <form method="post" enctype="multipart/form-data" class="form-horizontal">
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="firstname">First Name</label>
+                    <div class="col-md-9">
+                      <input type="text" id="firstname-input" name="firstname" class="form-control" placeholder="First Name"
+                             [(ngModel)]="currentUser.firstname">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="lastname">Last Name</label>
+                    <div class="col-md-9">
+                      <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Last Name"
+                             [(ngModel)]="currentUser.lastname" autocomplete="lastname">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="email">Email</label>
+                    <div class="col-md-9">
+                      <input type="email" id="email" name="email-input" class="form-control" placeholder="Enter Email"
+                             [(ngModel)]="currentUser.email"  autocomplete="Email">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="currentUsername">Username</label>
+                    <div class="col-md-9">
+                      <input type="text" id="currentUsername" name="currentUsername" class="form-control" placeholder="Username"
+                             [(ngModel)]="currentUser.username" autocomplete="Username">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="password">Password</label>
+                    <div class="col-md-9">
+                      <input type="password" id="password" name="password" class="form-control" placeholder="Password"
+                             [(ngModel)]="currentUser.password" autocomplete="current-password">
+                      <span class="help-block">Please enter a complex password</span>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="date-input">Date of Birth</label>
+                    <div class="col-md-9">
+                      <input class="form-control" id="date-input" type="date" name="dob" placeholder="Date of Birth"
+                             [(ngModel)]="currentUser.dob">
+                      <span class="help-block">Please enter a valid date</span>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="select1">Your Gender</label>
+                    <div class="col-md-9">
+                      <select id="select1" name="select1" class="form-control"
+                              [(ngModel)]="currentUser.gender">
+                        <option value="0">Please select</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- Phone number-->
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="phonenumber">Phone Number</label>
+                    <div class="col-md-9">
+                      <input type="text" id="phonenumber" name="phonenumber" class="form-control" placeholder="Phone Number"
+                             [(ngModel)]="currentUser.phonenumber" autocomplete="phonenumber">
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="healthdescription">Health Description</label>
+                    <div class="col-md-9">
+                        <textarea id="healthdescription" name="healthdescription" rows="9" class="form-control" placeholder="Content.."
+                                  [(ngModel)]="currentUser.healthdescription">
+                        </textarea>
+                    </div>
+                  </div>
+                  <div class="card-footer center-content">
+                    <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                    <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Clear all the fields</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="tabsPicker=='bilingInformation'">
+
+          <div class="col-md-12 center">
+            <div class="card">
+              <div class="card-header" label ="Add(Update) Billing Address">
+                <strong class="center-content">Billing Information</strong>
+              </div>
+              <div class="card-body">
+                <form (ngSubmit)="onNewBilling()" method="post">
+                  <input hidden="hidden" name="id" [(ngModel)]="billing.id"
+                         #id="ngModel"/>
+                  <!--First Name -->
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="firstname">First Name</label>
+                    <div class="col-md-9">
+                      <input type="text" id="firstname" name="firstname" class="form-control" placeholder="First Name" required="required"
+                             [(ngModel)]="billing.firstname"
+                             #firstname="ngModel"/></div>
+                  </div>
+                  <!--Last Name -->
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="lastname">Last Name</label>
+                    <div class="col-md-9">
+                      <input type="text" id="lastname" name="lastName" class="form-control" placeholder="Last Name" required="required"
+                             [(ngModel)]="billing.lastname"
+                             #lastname="ngModel"/></div>
+                  </div>
+                  <!--Street 1 -->
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="street1">Street 1</label>
+                    <div class="col-md-9">
+                      <input type="text" id="street1" name="street1" class="form-control" placeholder="Street 1" required="required"
+                             [(ngModel)]="billing.street1"
+                             #street1="ngModel"/>
+                    </div>
+                  </div>
+                  <!--Street 2 -->
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="street2">Street 2</label>
+                    <div class="col-md-9">
+                      <input type="text" id="street2" name="street2" class="form-control" placeholder="Street 2"
+                             [(ngModel)]="billing.street2"
+                             #street2="ngModel"/>
+                    </div>
+                  </div>
+                  <!--City -->
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="city">City</label>
+                    <div class="col-md-9">
+                      <input type="text" id="city" name="city" class="form-control" placeholder="City" required="required"
+                             [(ngModel)]="billing.city"
+                             #city="ngModel"/>
+                    </div>
+                  </div>
+                  <!--State-->
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="state">State</label>
+                    <div class="col-md-9">
+                      <input type="text" id="state" name="state" class="form-control" placeholder="State" required="required"
+                             [(ngModel)]="billing.state"
+                             #state="ngModel"/>
+                    </div>
+                  </div>
+                  <!--Post Code-->
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="postcode">Post Code</label>
+                    <div class="col-md-9">
+                      <input type="text" id="postcode" name="postcode" class="form-control" placeholder="Post Code"
+                             [(ngModel)]="billing.postcode"
+                             #postcode="ngModel"/>
+                    </div>
+                  </div>
+                  <!--Country -->
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="country">Country</label>
+                    <div class="col-md-9">
+                      <input type="text" id="country" name="country" class="form-control" placeholder="Country" required="required"
+                             [(ngModel)]="billing.country"
+                             #country="ngModel" />
+                    </div>
+                  </div>
+                  <!--Buttons -->
+                  <div class="card-footer center-content">
+                    <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                    <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Clear</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </ng-container>
+        <ng-container *ngIf="tabsPicker=='invoiceInformation'">
+          <div class="w-100">
+
+
+          </div>
+        </ng-container>
+      </div>
+      <!-- pagination Start -->
+      <div class="pagination_sec">
+        <div class="content_detail__pagination cdp">
+
+        </div>
+      </div>
+      <!-- pagination End -->
+    </div>
+  </div>
+</section>
+<!-- Section ends -->
+
+

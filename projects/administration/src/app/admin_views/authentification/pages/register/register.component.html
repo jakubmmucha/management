@@ -1,0 +1,90 @@
+<div id="register" fxLayout="column">
+
+  <div id="register-form-wrapper" fxLayout="column" fxLayoutAlign="center center">
+
+    <div id="register-form" [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}">
+
+      <div class="logo">
+        <img src="assets/images/logos/fuse.svg">
+      </div>
+
+      <div class="title">CREATE AN ACCOUNT</div>
+
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Username</mat-label>
+          <input type="text" id="username" class="form-control" matInput formControlName="username">
+          <mat-icon matSuffix class="secondary-text">account_circle</mat-icon>
+          <mat-error *ngIf="form.get('username').hasError('required')">
+            Name is required
+          </mat-error>
+          <mat-error *ngIf="form.get('username').hasError('minlength')">
+            Your user name must be at least 4 characters long
+          </mat-error>
+
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input type="email" id="email" class="form-control"  matInput formControlName="email" required>
+          <mat-icon matSuffix class="secondary-text">mail</mat-icon>
+          <mat-error *ngIf="form.get('email').hasError('required')">
+            Email is required
+          </mat-error>
+          <mat-error *ngIf="form.get('email').hasError('email')" >
+            Please enter a valid email address
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input type="password" id="password" class="form-control" matInput formControlName="password" required>
+          <mat-icon matSuffix class="secondary-text">vpn_key</mat-icon>
+          <mat-error *ngIf="form.get('password').hasError('required')">
+            Password is required
+          </mat-error>
+          <mat-error *ngIf="form.get('password').hasError('minlength')">
+            Password must be at least 4 characters long
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Password (Confirm)</mat-label>
+          <input type="password" id="passwordConfirm" class="form-control" matInput formControlName="passwordConfirm" >
+          <mat-icon matSuffix class="secondary-text">vpn_key</mat-icon>
+          <mat-error *ngIf="form.get('passwordConfirm').hasError('required')">
+            Password confirmation is required
+          </mat-error>
+          <mat-error>
+            Passwords must match
+          </mat-error>
+        </mat-form-field>
+
+        <div class="terms" fxLayout="row" fxLayoutAlign="center center">
+          <mat-checkbox name="terms" aria-label="I read and accept" required>
+            <span>I read and accept</span>
+          </mat-checkbox>
+          <a href="#">terms and conditions</a>
+        </div>
+
+        <button [disabled]="form.invalid" mat-raised-button color="accent" class="submit-button" aria-label="CREATE AN ACCOUNT">
+          CREATE AN ACCOUNT
+        </button>
+        <mat-error *ngIf="submitted && isSignUpFailed">
+          Signup failed!<br />{{ errorMessage }}
+        </mat-error>
+        <div class="alert-success success-text" fxLayout="column" fxLayoutAlign="center center" *ngIf="submitted&&isSuccessful&&!isSignUpFailed">
+          Your registration is successful!
+        </div>
+      </form>
+
+      <div class="register" fxLayout="column" fxLayoutAlign="center center">
+        <span class="text">Already have an account?</span>
+        <a class="link" [routerLink]="'/auth/login'">Login</a>
+      </div>
+
+    </div>
+
+  </div>
+</div>
